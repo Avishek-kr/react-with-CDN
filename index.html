@@ -20,9 +20,19 @@
 
     <script type="text/babel">
         const Banner= ()=>{
+            const title= "welcome to my website"
+            const subtitle= "this is a website for learning react"
+            const date= "todays date" 
+
+
             return (
                 <div>
-                <p>banner</p></div>
+                <h1>{title}</h1>
+                <h3>{subtitle}</h3>
+                <p>{date} : {new Date().toDateString()}</p>
+                <p>random no. : {Math.random()*100}</p>
+                <button onClick={(e)=>{console.log("clicked")}}></button>
+                </div>
             )
         }
         ReactDOM.render(<Banner />,  document.getElementById('banner'))
